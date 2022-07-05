@@ -140,11 +140,21 @@ Page({
     });
   },
   loginDemo() {
-    console.log(123);
     wx.cloud.callFunction({
-      name: 'loginDemo'
+      name: 'loginDemo',
     }).then(res => {
       console.log(res,'rerrr');
+    })
+  },
+  getUserInfo(res) {
+    console.log(res,'userInfo');
+    wx.cloud.callFunction({
+      name: 'loginDemo',
+      data: {
+        user: res.detail.userInfo
+      }
+    }).then(res => {
+      console.log(res.result,'rerrr');
     })
   }
 });

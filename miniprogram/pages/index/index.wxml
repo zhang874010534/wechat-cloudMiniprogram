@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <view class="container">
+  <button type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信登录</button>
   <view bindtap="loginDemo">loginDemo</view>
   <view class="title">快速了解云开发</view>
 
